@@ -21,6 +21,7 @@ after_success: bash ./autodeploy.sh
 {% endhighlight %}
 
 {% highlight bash %}
+# autodeploy.sh
 if [ -n "$GITHUB_API_KEY" ]; then
     cd "$TRAVIS_BUILD_DIR"
 
