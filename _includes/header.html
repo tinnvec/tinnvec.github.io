@@ -11,19 +11,27 @@
 
         {% if site.author.github_username %}
           <a class="nav-item" href="https://github.com/{{ site.author.github_username }}" target="_blank">
-            <span class="icon"><i class="fa fa-github" aria-hidden="true"></i></span>
+            <span class="icon">
+              <i class="fa fa-github" aria-hidden="true"></i>
+            </span>
           </a>
         {% endif %}
         
       </div>
 
-      <div class="nav-right">
+      <span class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
 
-        {% for page in site.pages %}
-          {% if page.title and page.permalink %}
+      <div class="nav-right nav-menu">
 
-            <a class="nav-item" href="{{ page.permalink }}">
-              {{ page.title }}
+        {% for site_page in site.pages %}
+          {% if site_page.title and site_page.permalink %}
+
+            <a class="nav-item is-tab{% if page.url contains site_page.url %} is-active{% endif %}" href="{{ site_page.permalink }}">
+              {{ site_page.title }}
             </a>
 
           {% endif %}
