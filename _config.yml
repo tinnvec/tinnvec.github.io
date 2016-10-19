@@ -1,8 +1,11 @@
 # site.url
-url: https://tinnvec.github.io
+url: "https://tinnvec.github.io"
+
+# site.baseurl
+baseurl: "/"
 
 # site.title
-title: tinnvec.github.io
+title: "tinnvec.github.io"
 
 # blog post permalink
-permalink: /blog/:year/:month/:day/:title/
+permalink: "/blog/:year/:month/:day/:title/"
