@@ -1,3 +1,17 @@
-<footer>
-  
+<footer class="footer">
+  <div class="container">
+    
+    <div class="content has-text-centered">
+      <p>
+        <strong>{{ site.title }}</strong>
+        {% if site.author %}
+          by
+          <a href="mailto:{{ site.data.authors[site.author].email }}">
+            {{ site.data.authors[site.author].full_name }}
+          </a>
+        {% endif %}
+      </p>
+    </div>
+
+  </div>
 </footer>
