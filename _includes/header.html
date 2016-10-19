@@ -1,0 +1,8 @@
+<header>
+  <a href="/">Home</a>
+  {% for page in site.pages %}
+    {% if page.title and page.permalink %}
+      <a href="{{ page.permalink }}">{{ page.title }}</a>
+    {% endif %}
+  {% endfor %}
+</header>

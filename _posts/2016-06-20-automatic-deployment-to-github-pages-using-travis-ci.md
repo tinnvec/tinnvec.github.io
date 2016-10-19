@@ -2,7 +2,6 @@
 layout: post
 title: "Automatic deployment to Github Pages using Travis CI"
 date: 2016-06-20 14:30:00 -0500
-categories: github-pages travis-ci deployment
 ---
 
 Working with [decal](https://github.com/tinnvec/decal), I have the need to host a very simple HTM5/JavaScript site.
