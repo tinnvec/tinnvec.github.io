@@ -4,10 +4,10 @@
     <div class="content has-text-centered">
       <p>
         <strong>{{ site.title }}</strong>
-        {% if site.author %}
+        {% if site.author.email and site.author.full_name %}
           by
-          <a href="mailto:{{ site.data.authors[site.author].email }}">
-            {{ site.data.authors[site.author].full_name }}
+          <a href="mailto:{{ site.author.email }}">
+            {{ site.author.full_name }}
           </a>
         {% endif %}
       </p>

@@ -8,7 +8,10 @@ baseurl: "/"
 title: "tinnvec.github.io"
 
 # site.author (key for _data/authors.json)
-author: "alex"
+author:
+  full_name: "Alex Hanna"
+  email: "tinnvec@gmail.com"
+  github_username: "tinnvec"
 
 # blog post permalink
 permalink: "/blog/:year/:month/:day/:title/"

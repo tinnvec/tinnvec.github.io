@@ -9,8 +9,8 @@
 
       <div class="nav-center">
 
-        {% if site.data.authors[site.author].github_username %}
-          <a class="nav-item" href="https://github.com/{{ site.data.authors[site.author].github_username }}" target="_blank">
+        {% if site.author.github_username %}
+          <a class="nav-item" href="https://github.com/{{ site.author.github_username }}" target="_blank">
             <span class="icon"><i class="fa fa-github" aria-hidden="true"></i></span>
           </a>
         {% endif %}
