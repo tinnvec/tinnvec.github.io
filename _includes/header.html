@@ -1,8 +1,26 @@
 <header>
-  <a href="/">Home</a>
-  {% for page in site.pages %}
-    {% if page.title and page.permalink %}
-      <a href="{{ page.permalink }}">{{ page.title }}</a>
-    {% endif %}
-  {% endfor %}
+  <nav class="nav has-shadow">
+    <div class="container">
+      <div class="nav-left">
+        <a class="nav-item is-brand" href="/">{{ site.title }}</a>
+      </div>
+
+      <!--<div class="nav-center"></div>-->
+
+      <span class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+
+      <div class="nav-right nav-menu">
+        {% for page in site.pages %}
+          {% if page.title and page.permalink %}
+            <a class="nav-item" href="{{ page.permalink }}">{{ page.title }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </nav>
+  
 </header>

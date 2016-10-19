@@ -4,8 +4,8 @@ title: Blog
 permalink: /blog/
 ---
 {% for post in site.posts %}
-  <h2><a href="{{ post.url }}">{{ post.title | escape }}</a></h2>
-  <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <h1 class="title">
+    <a href="{{ post.url }}">{{ post.title | escape }}</a>
+  </h1>
+  <h2 class="subtitle">{{ post.date | date: "%b %-d, %Y" }}</h2>
 {% endfor %}
-
-<p>Subscribe <a href="{{ "/feed.xml" }}">via RSS</a></p>
