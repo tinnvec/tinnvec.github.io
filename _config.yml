@@ -1,13 +1,14 @@
 # site.url
-url: "https://tinnvec.github.io"
-
 # site.baseurl
+url: "https://tinnvec.com"
 baseurl: "/"
 
 # site.title
-title: "tinnvec.github.io"
+# site.subtitle
+title: "tinnvec.com"
+subtitle: "tango india november november victor edward charlie"
 
-# site.author (key for _data/authors.json)
+# site.author
 author:
   full_name: "Alex Hanna"
   email: "tinnvec@gmail.com"
