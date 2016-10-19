@@ -1,0 +1,40 @@
+[
+  {
+    "name": "tinntime",
+    "description": "A watchface I made for myself but thought I'd also share. Includes weather, location and battery levels.",
+    "github_url": "https://github.com/tinnvec/tinntime",
+    "url": "http://tinnvec.github.io/tinntime/"
+  },
+  {
+    "name": "cryptsy-api2",
+    "description": "Ruby wrapper for Cryptsy API v2",
+    "github_url": "https://github.com/tinnvec/cryptsy-api2"
+  },
+  {
+    "name": "cinch-strawpoll",
+    "description": "Strawpoll plugin for Cinch",
+    "github_url": "https://github.com/tinnvec/cinch-strawpoll"
+  },
+  {
+    "name": "hearthstone_json",
+    "description": "Ruby gem for easily getting up to date info from hearthstonejson.com",
+    "github_url": "https://github.com/tinnvec/hearthstone_json"
+  },
+  {
+    "name": "stonebot",
+    "description": "Hearthstone bot for Discord",
+    "github_url": "https://github.com/tinnvec/stonebot"
+  },
+  {
+    "name": "decal",
+    "description": "A set of Hearthstone deck calculations for deeper deck insights.",
+    "github_url": "https://github.com/tinnvec/decal",
+    "url": "https://tinnvec.github.io/decal/"
+  },
+  {
+    "name": "deadpoll",
+    "description": "A poll website created for chatrealm and diamondclub.tv",
+    "github_url": "https://github.com/tinnvec/deadpoll",
+    "url": "http://deadpoll.me/"
+  }
+]

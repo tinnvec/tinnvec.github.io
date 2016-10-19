@@ -1,11 +1,53 @@
 ---
 layout: default
 ---
-<section class="section">
-  <div class="container">
-    <div class="heading">
-      <h1 class="title">{{ site.title }}</h1>
-      <!--<h2 class="subtitle"></h2>-->
+<section class="hero is-light is-medium is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title is-1">{{ site.title }}</h1>
+      <h2 class="subtitle">{{ site.subtitle }}</h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">Github Projects</h1>
+      <h2 class="subtitle">a sample of what I love to do</h2>
+      <br>
+
+      <div class="columns is-multiline">
+        {% for project in site.data.projects %}
+        <div class="column is-one-quarter">
+          <div class="card is-fullwidth">
+            <header class="card-header">
+              <p class="card-header-title has-text-centered">{{ project.name }}</p>
+            </header>
+
+            <div class="card-content">
+              <div class="content">{{ project.description }}</div>
+            </div>
+            
+            <footer class="card-footer">
+              {% if project.github_url %}
+                <a class="card-footer-item" href="{{ project.github_url }}" target="_blank">
+                  <i class="fa fa-github fa-lg"></i>
+                </a>
+              {% endif %}
+              
+              {% if project.url %}
+                <a class="card-footer-item" href="{{ project.url }}" target="_blank">
+                  <i class="fa fa-globe fa-lg"></i>
+                </a>
+              {% endif %}
+            </footer>
+
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
     </div>
   </div>
 </section>
