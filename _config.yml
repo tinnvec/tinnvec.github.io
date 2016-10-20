@@ -9,10 +9,7 @@ title: "tinnvec.com"
 subtitle: "tango india november november victor edward charlie"
 
 # site.author
-author:
-  full_name: "Alex Hanna"
-  email: "tinnvec@gmail.com"
-  github_username: "tinnvec"
+author: "alex"
 
 # blog post permalink
 permalink: "/blog/:year/:month/:day/:title/"

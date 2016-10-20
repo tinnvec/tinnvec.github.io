@@ -1,3 +1,5 @@
+{% assign author_usernames = site.data.authors[site.author].usernames %}
+
 <header>
 
   <nav class="nav has-shadow">
@@ -8,15 +10,45 @@
       </div>
 
       <div class="nav-center">
-
-        {% if site.author.github_username %}
-          <a class="nav-item" href="https://github.com/{{ site.author.github_username }}" target="_blank">
-            <span class="icon">
-              <i class="fa fa-github" aria-hidden="true"></i>
-            </span>
-          </a>
+        {% if author_usernames.github %}
+        <a class="nav-item" href="https://github.com/{{ author_usernames.github }}" target="_blank">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
         {% endif %}
-        
+
+        {% if author_usernames.twitter %}
+        <a class="nav-item" href="https://twitter.com/{{ author_usernames.twitter }}" target="_blank">
+          <span class="icon">
+            <i class="fa fa-twitter"></i>
+          </span>
+        </a>
+        {% endif %}
+
+        {% if author_usernames.linkedin %}
+        <a class="nav-item" href="https://www.linkedin.com/in/{{ author_usernames.linkedin }}" target="_blank">
+          <span class="icon">
+            <i class="fa fa-linkedin"></i>
+          </span>
+        </a>
+        {% endif %}
+
+        {% if author_usernames.youtube %}
+        <a class="nav-item" href="https://www.youtube.com/{{ author_usernames.youtube }}" target="_blank">
+          <span class="icon">
+            <i class="fa fa-youtube"></i>
+          </span>
+        </a>
+        {% endif %}
+
+        {% if author_usernames.twitch %}
+        <a class="nav-item" href="https://twitch.tv/{{ author_usernames.twitch }}" target="_blank">
+          <span class="icon">
+            <i class="fa fa-twitch"></i>
+          </span>
+        </a>
+        {% endif %}
       </div>
 
       <span class="nav-toggle">
