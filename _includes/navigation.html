@@ -1,0 +1,70 @@
+<nav class="nav">
+  <div class="container">
+    
+    <div class="nav-left">
+      <a class="nav-item is-brand" href="{{ site.baseurl }}">{{ site.title }}</a>
+    </div>
+
+    <div class="nav-center">
+      {% assign author_usernames = site.data.authors[site.author].usernames %}
+      {% if author_usernames.github %}
+      <a class="nav-item" href="https://github.com/{{ author_usernames.github }}" target="_blank">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      {% endif %}
+
+      {% if author_usernames.twitter %}
+      <a class="nav-item" href="https://twitter.com/{{ author_usernames.twitter }}" target="_blank">
+        <span class="icon">
+          <i class="fa fa-twitter"></i>
+        </span>
+      </a>
+      {% endif %}
+
+      {% if author_usernames.linkedin %}
+      <a class="nav-item" href="https://www.linkedin.com/in/{{ author_usernames.linkedin }}" target="_blank">
+        <span class="icon">
+          <i class="fa fa-linkedin"></i>
+        </span>
+      </a>
+      {% endif %}
+
+      {% if author_usernames.youtube %}
+      <a class="nav-item" href="https://www.youtube.com/{{ author_usernames.youtube }}" target="_blank">
+        <span class="icon">
+          <i class="fa fa-youtube"></i>
+        </span>
+      </a>
+      {% endif %}
+
+      {% if author_usernames.twitch %}
+      <a class="nav-item" href="https://twitch.tv/{{ author_usernames.twitch }}" target="_blank">
+        <span class="icon">
+          <i class="fa fa-twitch"></i>
+        </span>
+      </a>
+      {% endif %}
+    </div>
+
+    <span class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+
+    <div class="nav-right nav-menu">
+      {% for site_page in site.pages %}
+
+        {% if site_page.nav_name and site_page.permalink %}
+        <a class="nav-item is-tab{% if page.url contains site_page.url %} is-active{% endif %}" href="{{ site_page.permalink }}">
+          {{ site_page.nav_name }}
+        </a>
+        {% endif %}
+
+      {% endfor %}
+    </div>
+
+  </div>
+</nav>
