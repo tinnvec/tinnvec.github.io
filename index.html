@@ -9,36 +9,38 @@ subtitle: tango india november november victor edward charlie
     <div class="container has-text-centered">
       <h1 class="title is-2">Github Projects</h1>
       <h2 class="subtitle">a sample of what I love to do</h2>
-      <br>
+      <br> 
 
-      <div class="columns is-multiline">
-        {% for project in site.projects %}
-        <div class="column is-one-quarter">
-          <div class="card is-fullwidth">
-            <header class="card-header">
-              <p class="card-header-title has-text-centered">{{ project.title }}</p>
-            </header>
+      {% assign public_repos = site.github.public_repositories | where: 'fork',false | sort: 'pushed_at' | reverse %}
+      <div class="columns level">
+        {% for repository in public_repos limit: 4 %}
 
-            <div class="card-content">
-              <div class="content">{{ project.description }}</div>
-            </div>
-            
-            <footer class="card-footer">
-              {% if project.github_url %}
-                <a class="card-footer-item" href="{{ project.github_url }}" target="_blank">
-                  <i class="fa fa-github fa-lg"></i>
-                </a>
-              {% endif %}
+          <div class="column is-one-quarter level-item">
+            <div class="card is-fullwidth">
+
+              <header class="card-header">
+                <h2 class="subtitle card-header-title">{{ repository.name }}</h2>
+              </header>
+
+              <div class="card-content">
+                <p class="content">{{ repository.description }}</p>
+              </div>
               
-              {% if project.website_url %}
-                <a class="card-footer-item" href="{{ project.url }}" target="_blank">
-                  <i class="fa fa-globe fa-lg"></i>
-                </a>
-              {% endif %}
-            </footer>
+              <footer class="card-footer">
+                  <a class="card-footer-item" href="{{ repository.html_url }}" target="_blank">
+                    <i class="fa fa-github fa-2x"></i>
+                  </a>
+                
+                {% if repository.homepage %}
+                  <a class="card-footer-item" href="{{ repository.homepage }}" target="_blank">
+                    <i class="fa fa-globe fa-2x"></i>
+                  </a>
+                {% endif %}
+              </footer>
 
+            </div>
           </div>
-        </div>
+
         {% endfor %}
       </div>
 
