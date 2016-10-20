@@ -1,15 +1,19 @@
 # site.url
 # site.baseurl
-url: "https://tinnvec.com"
-baseurl: "/"
+url: https://tinnvec.com
+baseurl: /
 
 # site.title
 # site.subtitle
-title: "tinnvec.com"
-subtitle: "tango india november november victor edward charlie"
+title: tinnvec.com
+subtitle: tango india november november victor edward charlie
 
 # site.author
-author: "alex"
+author: alex
 
 # blog post permalink
-permalink: "/blog/:year/:month/:day/:title/"
+permalink: /blog/:year/:month/:day/:title/
+
+# custom collections
+collections:
+  projects:

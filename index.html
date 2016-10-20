@@ -18,11 +18,11 @@ layout: default
       <br>
 
       <div class="columns is-multiline">
-        {% for project in site.data.projects %}
+        {% for project in site.projects %}
         <div class="column is-one-quarter">
           <div class="card is-fullwidth">
             <header class="card-header">
-              <p class="card-header-title has-text-centered">{{ project.name }}</p>
+              <p class="card-header-title has-text-centered">{{ project.title }}</p>
             </header>
 
             <div class="card-content">
@@ -36,7 +36,7 @@ layout: default
                 </a>
               {% endif %}
               
-              {% if project.url %}
+              {% if project.website_url %}
                 <a class="card-footer-item" href="{{ project.url }}" target="_blank">
                   <i class="fa fa-globe fa-lg"></i>
                 </a>
