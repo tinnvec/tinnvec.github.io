@@ -19,7 +19,7 @@ subtitle: tango india november november victor edward charlie
             <div class="card is-fullwidth">
 
               <header class="card-header">
-                <h2 class="subtitle card-header-title">{{ repository.name }}</h2>
+                <p class="card-header-title">{{ repository.name }}</p>
               </header>
 
               <div class="card-content">
@@ -28,12 +28,12 @@ subtitle: tango india november november victor edward charlie
               
               <footer class="card-footer">
                   <a class="card-footer-item" href="{{ repository.html_url }}" target="_blank">
-                    <i class="fa fa-github fa-2x"></i>
+                    <i class="fa fa-github fa-lg"></i>
                   </a>
                 
                 {% if repository.homepage %}
                   <a class="card-footer-item" href="{{ repository.homepage }}" target="_blank">
-                    <i class="fa fa-globe fa-2x"></i>
+                    <i class="fa fa-globe fa-lg"></i>
                   </a>
                 {% endif %}
               </footer>
