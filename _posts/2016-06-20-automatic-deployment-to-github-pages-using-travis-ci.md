@@ -2,6 +2,12 @@
 layout: post
 title: "Automatic deployment to Github Pages using Travis CI"
 date: 2016-06-20 14:30:00 -0500
+categories:
+    - programming
+    - deployment
+tags:
+    - github pages
+    - travis ci
 ---
 Working with [decal](https://github.com/tinnvec/decal), I have the need to host a very simple HTM5/JavaScript site.
 This can be very easily done with Github Pages, but I can't be bothered to update the `gh-pages` branch manually every
@@ -22,33 +28,33 @@ after_success: bash ./autodeploy.sh
 {% highlight bash %}
 # autodeploy.sh
 if [ -n "$GITHUB_API_KEY" ]; then
-    cd "$TRAVIS_BUILD_DIR"
+  cd "$TRAVIS_BUILD_DIR"
 
-    # Grab SHA for nice linking
-    SHA=`git rev-parse --verify HEAD`
+  # Grab SHA for nice linking
+  SHA=`git rev-parse --verify HEAD`
 
-    # Move into repository folder with compiled code for gh-pages
-    cd public
+  # Move into repository folder with compiled code for gh-pages
+  cd public
 
-    # Make a temp git repo
-    git init
+  # Make a temp git repo
+  git init
 
-    # Set git config info for automated changes
-    git config user.name "Travis CI"
-    git config user.email "$COMMIT_AUTHOR_EMAIL"
+  # Set git config info for automated changes
+  git config user.name "Travis CI"
+  git config user.email "$COMMIT_AUTHOR_EMAIL"
 
-    # Add current dir contents to gh-pages branch
-    git checkout -b gh-pages
-    git add .
+  # Add current dir contents to gh-pages branch
+  git checkout -b gh-pages
+  git add .
 
-    # Commit the stuff
-    git commit -m "Deploy to GitHub Pages: ${SHA}"
+  # Commit the stuff
+  git commit -m "Deploy to GitHub Pages: ${SHA}"
 
-    # Push it up to gh-pages branch
-    # Make sure to make the output quiet, or else the API token will leak!
-    # This works because the API key can replace your password.
-    git push -f -q  https://<github_username>:$GITHUB_API_KEY@github.com/<github_username>/<github_repo> gh-pages
+  # Push it up to gh-pages branch
+  # Make sure to make the output quiet, or else the API token will leak!
+  # This works because the API key can replace your password.
+  git push -f -q  https://<github_username>:$GITHUB_API_KEY@github.com/<github_username>/<github_repo> gh-pages
 
-    cd "$TRAVIS_BUILD_DIR"
+  cd "$TRAVIS_BUILD_DIR"
 fi
 {% endhighlight %}
