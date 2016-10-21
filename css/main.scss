@@ -2,22 +2,36 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 # Default sass_dir: _sass
 ---
-@charset 'utf-8';
+@charset "utf-8";
 
-// Import bulma
-@import 'bulma/bulma';
+// Import Bulma utilities
+@import "bulma/sass/utilities/_all";
 
-// Make iframes work like responsive images
-.image iframe {
-  display: block;
-}
+// Bulma customizations
 
-.image.is-16by9 iframe {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
+// Link colors
+$link: $info;
+$link-invert: $info-invert;
+
+// Import remainder of bulma
+@import "bulma/sass/base/_all";
+@import "bulma/sass/elements/_all";
+@import "bulma/sass/components/_all";
+@import "bulma/sass/grid/_all";
+@import "bulma/sass/layout/_all";
+
+// nav-item in info hero
+.hero.is-info {
+  .nav-item a,
+  a.nav-item {
+    &.is-tab {
+      &:hover {
+        border-bottom: 1px solid $link-invert;
+      }
+      &.is-active {
+        border-bottom: 3px solid $link-invert;
+        color: $link-invert;
+      }
+    }
+  }
 }
