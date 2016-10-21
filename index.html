@@ -12,8 +12,8 @@ subtitle: I'm Alex, I like to code stuff and talk about games
       <br> 
 
       {% assign public_repos = site.github.public_repositories | where: 'fork',false | sort: 'pushed_at' | reverse %}
-      <div class="columns level">
-        {% for repository in public_repos limit: 4 %}
+      <div class="columns is-multiline level">
+        {% for repository in public_repos limit: 8 %}
 
           <div class="column is-one-quarter level-item">
             <div class="card is-fullwidth">
@@ -27,9 +27,9 @@ subtitle: I'm Alex, I like to code stuff and talk about games
               </div>
               
               <footer class="card-footer">
-                  <a class="card-footer-item" href="{{ repository.html_url }}" target="_blank">
-                    <i class="fa fa-github fa-lg"></i>
-                  </a>
+                <a class="card-footer-item" href="{{ repository.html_url }}" target="_blank">
+                  <i class="fa fa-github fa-lg"></i>
+                </a>
                 
                 {% if repository.homepage %}
                   <a class="card-footer-item" href="{{ repository.homepage }}" target="_blank">
@@ -55,24 +55,12 @@ subtitle: I'm Alex, I like to code stuff and talk about games
       <h1 class="title">YouTube</h1>
       <h2 class="subtitle">I also make videos sometimes</h2>
 
-      <div class="columns">
-        <div class="column is-one-third">
-          <figure class="image is-16by9">
-            <iframe width="640" height="360" src="https://www.youtube.com/embed/videoseries?list=PL8ZcCrtj9YYXaVup_cU-dPl7HIHVyA09s" frameborder="0" allowfullscreen></iframe>
-          </figure>
-        </div>
-
-        <div class="column is-one-third">
-          <figure class="image is-16by9">
-            <iframe width="640" height="360" src="https://www.youtube.com/embed/videoseries?list=PL8ZcCrtj9YYUSDLBhFBYqy-L0gVJdlZSi" frameborder="0" allowfullscreen></iframe>
-          </figure>
-        </div>
-
-        <div class="column is-one-third">
-          <figure class="image is-16by9">
-            <iframe width="640" height="360" src="https://www.youtube.com/embed/videoseries?list=PL8ZcCrtj9YYUwJLtrK8js-WAFms183NHl" frameborder="0" allowfullscreen></iframe>
-          </figure>
-        </div>
+      <div class="columns is-multiline">
+        {% for vid_url in site.data.youtube_videos.index_links limit: 6 %}
+          <div class="column is-one-third">
+            {% youtube vid_url %}
+          </div>
+        {% endfor %}
       </div>
     </div>
 
