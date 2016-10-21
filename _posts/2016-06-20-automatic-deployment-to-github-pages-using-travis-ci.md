@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Automatic deployment to Github Pages using Travis CI"
+title: Automatic deployment to Github Pages using Travis CI
 date: 2016-06-20 14:30:00 -0500
 categories:
     - programming
