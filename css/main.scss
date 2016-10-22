@@ -20,6 +20,8 @@ $link-invert: $info-invert;
 @import "bulma/sass/grid/_all";
 @import "bulma/sass/layout/_all";
 
+// Additional customizations
+
 // nav-item in info hero
 .hero.is-info {
   .nav-item a,
@@ -36,6 +38,7 @@ $link-invert: $info-invert;
   }
 }
 
+// Responsive 16x9 video
 .video {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */

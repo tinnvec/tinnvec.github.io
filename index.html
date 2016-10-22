@@ -2,6 +2,16 @@
 layout: page
 title: hi there
 subtitle: I'm Alex, I like to code stuff and talk about games
+youtube_videos:
+  - JIU3Y86TcjM
+  - nELZ0Vdf_hA
+  - 6hhD9Tdafu8
+  - R4n1NeHqFyc
+  - J4rXL_EDbG0
+  - 34_VwyuX-UQ
+  - edPb6TzEY3Q
+  - okUzvcuPz7A
+  - 5dYfRbGYPXk
 ---
 <section class="hero">
   <div class="hero-body">
@@ -51,11 +61,11 @@ subtitle: I'm Alex, I like to code stuff and talk about games
   <div class="hero-body">
 
     <div class="container has-text-centered">
-      <h1 class="title">YouTube</h1>
-      <h2 class="subtitle">I also make videos sometimes</h2>
+      <h1 class="title">YouTube Videos</h1>
+      <h2 class="subtitle">I also make these sometimes</h2>
 
       <div class="columns is-multiline">
-        {% for vid_id in site.data.youtube_videos.index_ids limit: 6 %}
+        {% for vid_id in page.youtube_videos limit: 6 %}
           <div class="column is-one-third">
             <div class="video">
               <iframe width="640" height="360" src="https://www.youtube.com/embed/{{ vid_id }}" frameborder="0" allowfullscreen></iframe>
