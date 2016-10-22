@@ -1,21 +1,26 @@
-# site.url
-# site.baseurl
-url: https://tinnvec.com
-baseurl: /
+# Dependencies
+markdown: kramdown
+highlighter: rouge
 
-# site.title
-title: tinnvec.com
-
-# site.author
-author: alex
-
-# blog post permalink
+# Permalinks
 permalink: /blog/:year/:month/:day/:title/
 
-# custom collections
+# Server
+host: 0.0.0.0
+# port: 4000
+baseurl: ""
+url: https://tinnvec.com
+encoding: UTF-8
+
+# Social
+title: tinnvec.com
+description: ""
+author: alex
+
+# Custom Vars
+
+# Collections
 collections:
   projects:
 
-# site.repository
-# for site.github https://help.github.com/articles/repository-metadata-on-github-pages/
-repository: tinnvec/tinnvec.github.io
+excerpt_separator: '---'
