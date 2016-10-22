@@ -19,5 +19,3 @@ collections:
 # site.repository
 # for site.github https://help.github.com/articles/repository-metadata-on-github-pages/
 repository: tinnvec/tinnvec.github.io
-
-gems: [jekyll-youtube]
