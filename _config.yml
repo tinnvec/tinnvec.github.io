@@ -1,7 +1,7 @@
 # Server
 host: 0.0.0.0
 # port: 4000
-baseurl: /
+baseurl: ""
 url: https://tinnvec.com
 encoding: UTF-8
 
@@ -27,6 +27,7 @@ highlighter: rouge
 
 # Gems
 gems:
+  - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
   - jemoji
