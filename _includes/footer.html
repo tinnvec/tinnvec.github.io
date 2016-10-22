@@ -3,10 +3,9 @@
     
     <p class="content has-text-centered">
       <strong>{{ site.title }}</strong>
-      {% assign site_author = site.data.authors[site.author] %}
-      {% if site_author %}
-      by <a href="mailto:{{ site_author.email }}">
-        {{ site_author.full_name }}
+      {% if site.author.name and site.author.email %}
+      by <a href="mailto:{{ site.author.email }}">
+        {{ site.author.name }}
       </a>
       {% endif %}
     </p>
