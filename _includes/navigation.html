@@ -6,20 +6,7 @@
     </div>
 
     <div class="nav-center">
-      {% for username in site.data.authors[site.author].usernames %}
-
-        {% assign service_name = username[0] %}
-        {% assign social_link = site.data.social_links[service_name] %}
-        
-        {% if social_link %}
-        <a class="nav-item" href="{{ social_link.url_base }}{{ username[1] }}" target="_blank">
-          <span class="icon">
-            <i class="fa fa-{{ service_name }}"></i>
-          </span>
-        </a>
-        {% endif %}
-
-      {% endfor %}
+      {% include social_links.html %}
     </div>
 
     <span class="nav-toggle">
