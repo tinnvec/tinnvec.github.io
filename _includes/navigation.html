@@ -2,7 +2,9 @@
   <div class="container">
     
     <div class="nav-left">
-      <a class="nav-item is-brand" href="{{ site.url }}">{{ site.title }}</a>
+      <a class="nav-item is-brand" href="{{ site.baseurl }}">
+        {{ site.title }}
+      </a>
     </div>
 
     <div class="nav-center">
@@ -19,7 +21,8 @@
       {% for site_page in site.pages %}
 
         {% if site_page.nav_name and site_page.permalink %}
-        <a class="nav-item is-tab{% if page.url contains site_page.url %} is-active{% endif %}" href="{{ site_page.permalink }}">
+        <a class="nav-item is-tab{% if page.url contains site_page.url %} is-active{% endif %}"
+           href="{{ site_page.permalink }}">
           {{ site_page.nav_name }}
         </a>
         {% endif %}
