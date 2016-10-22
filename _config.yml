@@ -1,10 +1,3 @@
-# Dependencies
-markdown: kramdown
-highlighter: rouge
-
-# Permalinks
-permalink: /blog/:year/:month/:day/:title/
-
 # Server
 host: 0.0.0.0
 # port: 4000
@@ -12,15 +5,31 @@ baseurl: ""
 url: https://tinnvec.com
 encoding: UTF-8
 
+# Permalinks
+permalink: /blog/:year/:month/:day/:title/
+
 # Social
 title: tinnvec.com
 description: ""
-author: alex
+author:
+  name: Alex Hanna
+  email: tinnvec@gmail.com
+  picture: ""
+  twitter: tinnvec
+  github: tinnvec
+  linkedin: tinnvec
+  youtube: tinnvec
+  twitch: tinnvec
 
-# Custom Vars
+# Dependencies
+markdown: kramdown
+highlighter: rouge
 
-# Collections
-collections:
-  projects:
+# Gems
+gems:
+  - jekyll-sitemap
+  - jekyll-feed
 
-excerpt_separator: '---'
+# Feed
+feed:
+  path: blog/feed.xml
