@@ -30,8 +30,12 @@ gems:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-paginate
   - jemoji
 
 # Feed
 feed:
   path: blog/feed.xml
+
+# Paginate
+paginate: 10

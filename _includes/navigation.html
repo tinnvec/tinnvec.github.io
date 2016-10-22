@@ -20,9 +20,9 @@
     <div class="nav-right nav-menu">
       {% for site_page in site.pages %}
 
-        {% if site_page.nav_name and site_page.permalink %}
+        {% if site_page.nav_name and site_page.url %}
         <a class="nav-item is-tab{% if page.url contains site_page.url %} is-active{% endif %}"
-           href="{{ site_page.permalink }}">
+           href="{{ site_page.url }}">
           {{ site_page.nav_name }}
         </a>
         {% endif %}
