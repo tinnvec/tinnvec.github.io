@@ -26,36 +26,4 @@ after_success: bash ./autodeploy.sh
 
 * Create `autodeploy.sh` as shown below (note: replace `<github_username>` and `<github_repo>` with your info)
 
-```bash
-# autodeploy.sh
-if [ -n "$GITHUB_API_KEY" ]; then
-  cd "$TRAVIS_BUILD_DIR"
-
-  # Grab SHA for nice linking
-  SHA=`git rev-parse --verify HEAD`
-
-  # Move into repository folder with compiled code for gh-pages
-  cd public
-
-  # Make a temp git repo
-  git init
-
-  # Set git config info for automated changes
-  git config user.name "Travis CI"
-  git config user.email "$COMMIT_AUTHOR_EMAIL"
-
-  # Add current dir contents to gh-pages branch
-  git checkout -b gh-pages
-  git add .
-
-  # Commit the stuff
-  git commit -m "Deploy to GitHub Pages: ${SHA}"
-
-  # Push it up to gh-pages branch
-  # Make sure to make the output quiet, or else the API token will leak!
-  # This works because the API key can replace your password.
-  git push -f -q  https://<github_username>:$GITHUB_API_KEY@github.com/<github_username>/<github_repo> gh-pages
-
-  cd "$TRAVIS_BUILD_DIR"
-fi
-```
+{% gist 8eeec36e2119128d201a018d2d924405 %}

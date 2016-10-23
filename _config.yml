@@ -27,10 +27,11 @@ highlighter: rouge
 
 # Gems
 gems:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-paginate
   - jemoji
 
 # Feed
