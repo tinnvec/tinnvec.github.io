@@ -12,6 +12,7 @@ tags:
 Working with [decal](https://github.com/tinnvec/decal), I have the need to host a very simple HTML5/JavaScript site.
 This can be very easily done with Github Pages, but I can't be bothered to update the `gh-pages` branch manually every
 time I update the underlying source code.
+<!-- more -->
 
 Enter [Travis CI](https://travis-ci.org/) to  save the day. A simple `after_success` script can take care of everything.
 

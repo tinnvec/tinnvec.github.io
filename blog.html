@@ -6,21 +6,36 @@ subtitle: just some thoughts and code
 ---
 <section class="section">
   <div class="container">
+
     {% for post in site.posts %}
       <h1 class="title">
         <a href="{{ post.url }}">{{ post.title | escape }}</a>
       </h1>
 
       <h2 class="subtitle">
+        <i class="fa fa-calendar"></i>
         {{ post.date | date: "%b %-d, %Y" }}
       </h2>
+
+      <p class="content">{{ post.excerpt }}</p>
+      <p>
+        <a href="{{ post.url }}">
+          read more
+          <i class="fa fa-angle-down" style="vertical-align: text-bottom;"></i>
+        </a>
+      </p>
     {% endfor %}
 
-    <br>
-    
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
     <p class="has-text-centered">
       <span class="icon"><i class="fa fa-rss"></i></span>
       Subscribe via <a href="{{ "/blog/feed.xml" }}">RSS</a>
     </p>
+
   </div>
 </section>
