@@ -2,11 +2,16 @@
   <div class="container">
     
     <p class="content has-text-centered">
+      {% if site.title %}
       <strong>{{ site.title }}</strong>
+      {% endif %}
+
       {% if site.author.name and site.author.email %}
       by <a href="mailto:{{ site.author.email }}">
         {{ site.author.name }}
       </a>
+      <br>
+      proud member of <a href="http://dctvpedia.com/" target="_blank">chatrealm</a> &lt;&gt;
       {% endif %}
     </p>
 
