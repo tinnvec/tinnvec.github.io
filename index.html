@@ -2,6 +2,15 @@
 layout: page
 title: hi there
 subtitle: I'm Alex, I like to code stuff and talk about games
+github_projects:
+  - tinnvec.github.io
+  - decal
+  - hearthstone_json
+  - stonebot
+  - deadpoll
+  - cinch-strawpoll
+  - convertom
+  - tinntime
 youtube_videos:
   - JIU3Y86TcjM
   - nELZ0Vdf_hA
@@ -15,41 +24,39 @@ youtube_videos:
     <div class="container has-text-centered">
       <h1 class="title is-2">Github Projects</h1>
       <h2 class="subtitle">a bit of what I love to do</h2>
-      <br> 
-
-      {% assign public_repos = site.github.public_repositories | where: 'fork',false | sort: 'pushed_at' | reverse %}
+      <br>
       <div class="columns is-multiline level">
-        {% for repository in public_repos limit: 8 %}
+      {% assign public_repos = site.github.public_repositories | sort: 'pushed_at' | reverse %}
+      {% for repository in public_repos %}
+        {% if page.github_projects contains repository.name %}
+        <div class="column is-one-quarter level-item">
+          <div class="card is-fullwidth">
 
-          <div class="column is-one-quarter level-item">
-            <div class="card is-fullwidth">
+            <header class="card-header">
+              <p class="card-header-title">{{ repository.name }}</p>
+            </header>
 
-              <header class="card-header">
-                <p class="card-header-title">{{ repository.name }}</p>
-              </header>
-
-              <div class="card-content">
-                <p class="content">{{ repository.description }}</p>
-              </div>
-              
-              <footer class="card-footer">
-                <a class="card-footer-item" href="{{ repository.html_url }}" target="_blank">
-                  <i class="fa fa-github fa-lg"></i>
-                </a>
-                
-                {% if repository.homepage %}
-                  <a class="card-footer-item" href="{{ repository.homepage }}" target="_blank">
-                    <i class="fa fa-globe fa-lg"></i>
-                  </a>
-                {% endif %}
-              </footer>
-
+            <div class="card-content">
+              <p class="content">{{ repository.description }}</p>
             </div>
+            
+            <footer class="card-footer">
+              <a class="card-footer-item" href="{{ repository.html_url }}" target="_blank">
+                <i class="fa fa-github fa-lg"></i>
+              </a>
+              
+              {% if repository.homepage %}
+                <a class="card-footer-item" href="{{ repository.homepage }}" target="_blank">
+                  <i class="fa fa-globe fa-lg"></i>
+                </a>
+              {% endif %}
+            </footer>
+
           </div>
-
-        {% endfor %}
+        </div>
+        {% endif %}
+      {% endfor %}
       </div>
-
     </div>
   </div>
 </section>
