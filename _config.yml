@@ -46,3 +46,8 @@ feed:
 
 # Paginate
 paginate: 10
+
+# Collections
+collections:
+  diamond-dialogue:
+    output: true

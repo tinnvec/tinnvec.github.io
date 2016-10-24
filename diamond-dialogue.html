@@ -1,0 +1,29 @@
+---
+layout: page
+title: diamond dialogue
+subtitle: a short-form interview show, featuring the members of chatrealm
+---
+<section class="section">
+  <div class="container">
+    {% for episode in site.diamond-dialogue %}
+      <h1 class="title">
+        <a href="{{ episode.url }}">{{ episode.title | escape }}</a>
+      </h1>
+
+      <h2 class="subtitle">
+        <i class="fa fa-calendar"></i>
+        {{ episode.date | date: "%b %-d, %Y" }}
+      </h2>
+
+      <div class="content">
+        {{ episode.description }}
+      </div>
+      <p>
+        <a href="{{ episode.url }}">
+          read more
+          <i class="fa fa-angle-down" style="vertical-align: text-bottom;"></i>
+        </a>
+      </p>
+    {% endfor %}
+  </div>
+</section>
