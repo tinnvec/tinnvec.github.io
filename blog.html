@@ -17,7 +17,9 @@ subtitle: just some thoughts and code
         {{ post.date | date: "%b %-d, %Y" }}
       </h2>
 
-      <p class="content">{{ post.excerpt }}</p>
+      <div class="content">
+        {{ post.excerpt }}
+      </div>
       <p>
         <a href="{{ post.url }}">
           read more
