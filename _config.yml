@@ -24,6 +24,9 @@ author:
   youtube: tinnvec
   twitch: tinnvec
 
+# Google Analytics
+google_analytics: UA-47261670-1
+
 # Dependencies
 markdown: kramdown
 highlighter: rouge
