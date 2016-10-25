@@ -31,7 +31,7 @@ layout: null
     </author>
   {% endif %}
 
-  {% for episode in site.diamond-dialogue %}
+  {% for episode in site.diamond-dialogue reversed %}
     <entry>
       <title type="html">{{ episode.title | smartify | strip_html | normalize_whitespace | xml_escape }}</title>
       <link href="{{ episode.url | absolute_url | prepend: site.url }}" rel="alternate" type="text/html" title="{{ episode.title | xml_escape }}" />
