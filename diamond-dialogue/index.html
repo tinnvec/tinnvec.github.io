@@ -26,9 +26,9 @@ subtitle: a short-form interview show, featuring the members of chatrealm
         </a>
       </p>
 
-      {% if rindex0 != 0 }
-      <br>
-      {% endif %}
+      {% unless forloop.last %}
+      <hr>
+      {% endunless %}
     {% endfor %}
   </div>
 </section>

@@ -26,6 +26,10 @@ subtitle: just some thoughts and code
           <i class="fa fa-angle-down" style="vertical-align: text-bottom;"></i>
         </a>
       </p>
+      
+      {% unless forloop.last %}
+      <hr>
+      {% endunless %}
     {% endfor %}
 
   </div>
