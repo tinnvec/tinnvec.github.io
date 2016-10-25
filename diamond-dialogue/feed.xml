@@ -39,8 +39,8 @@ layout: null
       <updated>{{ episode.last_modified_at | default: episode.date | date_to_xmlschema }}</updated>
       <id>{{ episode.id | absolute_url | prepend: site.url | xml_escape }}</id>
 
-      <link rel="enclosure"  type="audio/mpeg" title="MP3" href="{{ episode.audio.file }}" length="{{ episode.audio.time }}" />
-      <link rel="enclosure" type="video/mp4" title="MP4" href="{{ episode.video.file }}" length="{{ episode.video.time }}" />
+      <link rel="enclosure"  type="audio/mpeg" title="MP3" href="{{ episode.audio.file }}" length="{{ episode.audio.bytes }}" />
+      <link rel="enclosure" type="video/mp4" title="MP4" href="{{ episode.video.file }}" length="{{ episode.video.bytes }}" />
 
       <content type="html" xml:base="{{ episode.url | absolute_url | prepend: site.url | xml_escape }}">{{ episode.description | strip | xml_escape }}</content>
 
