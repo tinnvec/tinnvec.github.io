@@ -2,7 +2,7 @@
 host: 0.0.0.0
 # port: 4000
 baseurl: ""
-url: https://tinnvec.com
+url: http://tinnvec.com
 encoding: UTF-8
 
 # Permalinks
@@ -13,7 +13,7 @@ excerpt_separator: <!-- more -->
 
 # Social
 title: tinnvec.com
-description: ""
+description: tinnvec.com
 author:
   name: Alex Hanna
   email: tinnvec@gmail.com
