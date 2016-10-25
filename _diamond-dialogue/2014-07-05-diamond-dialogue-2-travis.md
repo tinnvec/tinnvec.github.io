@@ -1,6 +1,6 @@
 ---
 layout: dd_ep
-title: "Diamond Dialogue #1 - tobypinder"
+title: "Diamond Dialogue #2 - travis"
 date: 2014-07-05 15:43:00 -0500
 description: "Travis joins us for some fun discussion on the 2nd episode of Diamond Dialogue"
 audio:
