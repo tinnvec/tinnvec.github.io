@@ -1,0 +1,64 @@
+---
+layout: page
+nav_name: about
+title: about me
+subtitle: 
+---
+<section class="section">
+  <div class="container">
+
+    <div class="columns">
+      <div class="column is-half is-offset-one-quarter">
+        <nav class="level">
+
+          {% if site.author.twitter %}
+          <div class="level-item has-text-centered">
+            <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank">
+              <p class="icon is-large"><i class="fa fa-twitter"></i></p>
+              <p class="heading">Twitter</p>
+            </a>
+          </div>
+          {% endif %}
+
+          {% if site.author.linkedin %}
+          <div class="level-item has-text-centered">
+            <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank">
+              <p class="icon is-large"><i class="fa fa-linkedin"></i></p>
+              <p class="heading">LinkedIn</p>
+            </a>
+          </div>
+          {% endif %}
+
+          {% if site.author.github %}
+          <div class="level-item has-text-centered">
+            <a href="https://github.com/{{ site.author.github }}" target="_blank">
+              <p class="icon is-large"><i class="fa fa-github"></i></p>
+              <p class="heading">Github</p>
+            </a>
+          </div>
+          {% endif %}
+
+          {% if site.author.youtube %}
+          <div class="level-item has-text-centered">
+            <a href="https://www.youtube.com/{{ site.author.youtube }}" target="_blank">
+              <p class="icon is-large"><i class="fa fa-youtube-play"></i></p>
+              <p class="heading">YouTube</p>
+            </a>
+          </div>
+          {% endif %}
+
+          {% if site.author.twitch %}
+          <div class="level-item has-text-centered">
+            <a href="https://twitch.tv/{{ site.author.twitch }}" target="_blank">
+              <p class="icon is-large"><i class="fa fa-twitch"></i></p>
+              <p class="heading">Twitch</p>
+            </a>
+          </div>
+          {% endif %}
+
+        </nav>
+      </div>
+    </div>
+    
+  </div>
+</section>
