@@ -9,15 +9,8 @@ layout: null
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ '/' | absolute_url | prepend: site.url | xml_escape }}/</id>
 
-  {% if site.title %}
-    <title type="html">{{ site.title | smartify | xml_escape }}</title>
-  {% elsif site.name %}
-    <title type="html">{{ site.name | smartify | xml_escape }}</title>
-  {% endif %}
-
-  {% if site.description %}
-    <subtitle>{{ site.description | xml_escape }}</subtitle>
-  {% endif %}
+  <title type="html">Diamond Dialogue</title>
+  <subtitle>A short-form interview show, featuring the members of chatrealm</subtitle>
 
   {% if site.author %}
     <author>
