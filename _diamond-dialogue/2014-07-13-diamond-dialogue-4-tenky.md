@@ -9,6 +9,6 @@ audio:
   bytes: 24309759
 video:
   id: L5wyHjjucK0
-  file: https://archive.org/download/DiamondDialogueEpisode_201610/DD%20E04.mp4
+  file: http://archive.org/download/DiamondDialogueEpisode_201610/DD%20E04.mp4
   bytes: 738244856
 ---
