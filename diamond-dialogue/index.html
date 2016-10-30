@@ -7,17 +7,11 @@ redirect_from: /dd
 ---
 <section class="section">
   <div class="container">
-
     <p class="has-text-centered">
       <span class="icon"><i class="fa fa-rss"></i></span>
       Subscribe via <a href="{{ "/diamond-dialogue/feed.xml" }}">RSS</a>
     </p>
 
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
     {% for episode in site.diamond-dialogue reversed %}
       <h1 class="title">
         <a href="{{ episode.url }}">{{ episode.title | escape }}</a>
