@@ -20,6 +20,26 @@ $link-invert: $info-invert;
 @import "bulma/sass/grid/_all";
 @import "bulma/sass/layout/_all";
 
+// Import FontAwesome variables
+@import "Font-Awesome/scss/variables";
+
+// Modify font path
+$fa-font-path: "fonts";
+
+// Import remainder of FontAwesome
+@import "Font-Awesome/scss/mixins";
+@import "Font-Awesome/scss/path";
+@import "Font-Awesome/scss/core";
+@import "Font-Awesome/scss/larger";
+@import "Font-Awesome/scss/fixed-width";
+@import "Font-Awesome/scss/list";
+@import "Font-Awesome/scss/bordered-pulled";
+@import "Font-Awesome/scss/animated";
+@import "Font-Awesome/scss/rotated-flipped";
+@import "Font-Awesome/scss/stacked";
+@import "Font-Awesome/scss/icons";
+@import "Font-Awesome/scss/screen-reader";
+
 // Additional customizations
 
 // nav-item in info hero
