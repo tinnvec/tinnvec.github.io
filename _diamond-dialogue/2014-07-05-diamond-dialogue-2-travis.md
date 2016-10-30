@@ -9,6 +9,6 @@ audio:
   bytes: 34427180
 video:
   id: 409GVe2wICM
-  file: https://archive.org/download/DDE02_201610/DD%20E02.mp4
+  file: http://archive.org/download/DDE02_201610/DD%20E02.mp4
   bytes: 531058976
 ---

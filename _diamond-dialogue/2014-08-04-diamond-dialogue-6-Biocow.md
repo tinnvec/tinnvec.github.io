@@ -9,6 +9,6 @@ audio:
   bytes: 15836472
 video:
   id: g8x08C3EDDw
-  file: https://archive.org/download/DDE06_201610/DD%20E06.mp4
+  file: http://archive.org/download/DDE06_201610/DD%20E06.mp4
   bytes: 416425313
 ---
