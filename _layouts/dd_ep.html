@@ -9,21 +9,26 @@ layout: default
 
 <section class="section">
   <div class="container">
-    <h1 class="title">{{ page.title }}</h1>
-    <h2 class="subtitle">
-      <i class="fa fa-calendar"></i>
-      {{ page.date | date: "%b %-d, %Y" }}
-    </h2>
-    <div class="content">
-      <p>
-        {{ page.description }}
-      </p>
-      <p>
-        <iframe width="640" height="30" src="https://archive.org/embed/{{ page.audio.id }}"  frameborder="0" allowfullscreen></iframe>
-      </p>
-      <p>
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/{{ page.video.id }}?rel=0" frameborder="0" allowfullscreen></iframe>
-      </p>
+    <div class="columns">
+      <div class="column is-8 is-offset-2 has-text-centered">
+        <h1 class="title">{{ page.title }}</h1>
+        <h2 class="subtitle">
+          <i class="fa fa-calendar"></i>
+          {{ page.date | date: "%b %-d, %Y" }}
+        </h2>
+        <div class="content">
+          <p>
+            {{ page.description }}
+          </p>
+          <p>
+            <iframe width="640" height="30" src="https://archive.org/embed/{{ page.audio.id }}"  frameborder="0" allowfullscreen></iframe>
+          </p>
+          <p>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/{{ page.video.id }}?rel=0" frameborder="0" allowfullscreen></iframe>
+          </p>
+        </div>
+        <p><a href="{{ "/diamond-dialogue" }}">Back to List</a></p>
+      </div>
     </div>
   </div>
 </section>
