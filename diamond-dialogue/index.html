@@ -7,35 +7,35 @@ redirect_from: /dd
 ---
 <section class="section">
   <div class="container">
-    <p class="has-text-centered">
-      <span class="icon"><i class="fa fa-rss"></i></span>
-      Subscribe via <a href="{{ "/diamond-dialogue/feed.xml" }}">RSS</a>
-    </p>
-    <br>
-    <hr>
-    {% for episode in site.diamond-dialogue reversed %}
-      <h1 class="title">
-        <a href="{{ episode.url }}">{{ episode.title | escape }}</a>
-      </h1>
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <p class="has-text-centered">
+          <span class="icon"><i class="fa fa-rss"></i></span>
+          Subscribe via <a href="{{ "/diamond-dialogue/feed.xml" }}">RSS</a>
+          or <a href="https://itunes.apple.com/us/podcast/diamond-dialogue/id907972126">iTunes</a>
+        </p>
+        <br>
+        <hr>
+        {% for episode in site.diamond-dialogue reversed %}
+          <div class="has-text-centered">
+            <h1 class="title">
+              <a href="{{ episode.url }}">{{ episode.title | escape }}</a>
+            </h1>
 
-      <h2 class="subtitle">
-        <i class="fa fa-calendar"></i>
-        {{ episode.date | date: "%b %-d, %Y" }}
-      </h2>
+            <h2 class="subtitle">
+              <i class="fa fa-calendar"></i>
+              {{ episode.date | date: "%b %-d, %Y" }}
+            </h2>
 
-      <div class="content">
-        {{ episode.description }}
+            <div class="content">
+              {{ episode.description }}
+            </div>
+          </div>
+          {% unless forloop.last %}
+          <hr>
+          {% endunless %}
+        {% endfor %}
       </div>
-      <p>
-        <a href="{{ episode.url }}">
-          read more
-          <i class="fa fa-angle-down" style="vertical-align: text-bottom;"></i>
-        </a>
-      </p>
-
-      {% unless forloop.last %}
-      <hr>
-      {% endunless %}
-    {% endfor %}
+    </div>
   </div>
 </section>
