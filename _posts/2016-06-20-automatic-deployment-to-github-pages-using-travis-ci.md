@@ -16,7 +16,7 @@ time I update the underlying source code.
 
 Enter [Travis CI](https://travis-ci.org/) to  save the day. A simple `after_success` script can take care of everything.
 
-* Create a [Github personal access token](https://github.com/settings/tokens]) with `public_repo` permissions.
+* Create a [Github personal access token](https://github.com/settings/tokens) with `public_repo` permissions.
 * On [Travis CI](https://travis-ci.org/), add the `GITHUB_API_TOKEN` environment variable under settings for your repository, setting it's value to the token you just made.
 * In the project's `.travis.yml` file, execute your script in the `after_success` block as shown below
 
