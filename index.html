@@ -4,10 +4,8 @@ title: hi there
 subtitle: I'm Alex, I like to code stuff and talk about games
 github_projects:
   - tinnvec.github.io
-  - decal
   - hearthstone_json
   - stonebot
-  - deadpoll
   - cinch-strawpoll
   - convertom
   - tinntime
@@ -29,7 +27,7 @@ youtube_videos:
       {% assign public_repos = site.github.public_repositories | sort: 'pushed_at' | reverse %}
       {% for repository in public_repos %}
         {% if page.github_projects contains repository.name %}
-        <div class="column is-one-quarter level-item">
+        <div class="column is-one-third level-item">
           <div class="card is-fullwidth">
 
             <header class="card-header">
