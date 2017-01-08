@@ -5,50 +5,18 @@ baseurl: ""
 url: http://tinnvec.com
 encoding: UTF-8
 
-# Permalinks
-permalink: /blog/:year/:month/:day/:title/
+# Theme
+theme: jekyll-theme-leap-day
 
-# Excerpt Separator
-excerpt_separator: <!-- more -->
-
-# Social
+# Info
 title: tinnvec.com
-description: tinnvec.com
-author:
-  name: Alex Hanna
-  email: tinnvec@gmail.com
-  picture: https://www.gravatar.com/avatar/3dbcfa15c165fefec6e454362538dfb2
-  twitter: tinnvec
-  github: tinnvec
-  linkedin: tinnvec
-  youtube: tinnvec
-  twitch: tinnvec
+description: ''
 
 # Google Analytics
 google_analytics: UA-47261670-1
 
-# Dependencies
-markdown: kramdown
-highlighter: rouge
+# Permalinks
+# permalink: /blog/:year/:month/:day/:title/
 
-# Gems
-gems:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-redirect-from
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jemoji
-
-# Feed
-feed:
-  path: blog/feed.xml
-
-# Paginate
-paginate: 10
-
-# Collections
-collections:
-  diamond-dialogue:
-    output: true
+# Excerpt Separator
+# excerpt_separator: <!-- more -->
