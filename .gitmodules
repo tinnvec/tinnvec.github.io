@@ -1,6 +1,0 @@
-[submodule "_sass/bulma"]
-	path = _sass/bulma
-	url = https://github.com/jgthms/bulma.git
-[submodule "_sass/Font-Awesome"]
-	path = _sass/Font-Awesome
-	url = https://github.com/FortAwesome/Font-Awesome.git
