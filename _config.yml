@@ -1,6 +1,4 @@
 # Server
-host: 0.0.0.0
-# port: 4000
 baseurl: ""
 url: http://tinnvec.com
 encoding: UTF-8
@@ -10,16 +8,17 @@ theme: jekyll-theme-leap-day
 
 # Info
 title: tinnvec.com
-description: ''
+description: 'home of all things tinnvec'
 
 # Google Analytics
 google_analytics: UA-47261670-1
 
-# Permalinks
-# permalink: /blog/:year/:month/:day/:title/
-
 # Excerpt Separator
-# excerpt_separator: <!-- more -->
+excerpt_separator: <!-- more -->
+
+# Permalinks
+permalink: /blog/:year/:month/:day/:title/
+
 gems:
     - jekyll-sitemap
     - jekyll-seo-tag
