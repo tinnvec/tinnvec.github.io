@@ -1,11 +1,77 @@
 <!doctype html>
 <html>
-  {% include head.html %}
-  <body>
-    {{ content }}
-    {% include footer.html %}
-    {% include analytics.html %}
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="{{ "/js/main.js" }}"></script>
-  </body>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ '/assets/images/favicon/apple-icon-57x57.png' | relative_url }}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{ '/assets/images/favicon/apple-icon-60x60.png' | relative_url }}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ '/assets/images/favicon/apple-icon-72x72.png' | relative_url }}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ '/assets/images/favicon/apple-icon-76x76.png' | relative_url }}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ '/assets/images/favicon/apple-icon-114x114.png' | relative_url }}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ '/assets/images/favicon/apple-icon-120x120.png' | relative_url }}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ '/assets/images/favicon/apple-icon-144x144.png' | relative_url }}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ '/assets/images/favicon/apple-icon-152x152.png' | relative_url }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicon/apple-icon-180x180.png' | relative_url }}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{{ '/assets/images/favicon/android-icon-192x192.png' | relative_url }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon/favicon-32x32.png' | relative_url }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ '/assets/images/favicon/favicon-96x96.png' | relative_url }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon/favicon-16x16.png' | relative_url }}">
+        <link rel="manifest" href="{{ '/assets/images/favicon/manifest.json' | relative_url }}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="{{ '/assets/images/favicon/ms-icon-144x144.png' | relative_url }}">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        {% seo %}
+    </head>
+
+    <body>
+        <header>
+            <h1>{{ site.title | default: site.github.repository_name }}</h1>
+            <p>{{ site.description | default: site.github.project_tagline }}</p>
+        </header>
+        <div id="banner">
+            <ul class="downloads">
+                <li><a href="/" class="button">Home</a></li>
+                {% for page in site.pages %}
+                    {% if page.url and page.title %}
+                        <li><a href="{{ page.url }}" class="button">{{ page.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        <!-- end banner -->
+        <div class="wrapper">
+            <nav>
+                <ul></ul>
+            </nav>
+            <section>
+                {{ content }}
+            </section>
+            <footer>
+                <p><small>Theme by <a href="https://twitter.com/michigangraham" target="_blank">mattgraham</a></small></p>
+            </footer>
+        </div>
+        <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+        {% if site.google_analytics %}
+            <script type="text/javascript">
+                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost +
+                    "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+                try {
+                    var pageTracker = _gat._getTracker("{{ site.google_analytics }}");
+                    pageTracker._trackPageview();
+                } catch (err) {}
+            </script>
+        {% endif %}
+    </body>
+
 </html>

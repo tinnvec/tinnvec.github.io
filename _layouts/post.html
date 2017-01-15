@@ -1,20 +1,6 @@
 ---
 layout: default
 ---
-<section class="hero is-info">
-  <div class="hero-head">
-    {% include navigation.html %}
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h1 class="title">{{ page.title }}</h1>
-    <h2 class="subtitle">
-      <i class="fa fa-calendar"></i>
-      {{ page.date | date: "%b %-d, %Y" }}
-    </h2>
-    <div class="content">{{ content }}</div>
-    <p class="has-text-centered"><a href="{{ "/blog" }}">Back to Blog</a></p>
-  </div>
-</section>
+<h1>{{ page.title }}</h1>
+<h3>{{ page.date | date: "%B %-d, %Y - %I:%M %P" }}</h3>
+{{ content }}
