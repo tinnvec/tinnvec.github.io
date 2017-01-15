@@ -37,10 +37,13 @@
             <p>{{ site.description | default: site.github.project_tagline }}</p>
         </header>
         <div id="banner">
-            <a href="{{ site.github.owner_url }}" class="button fork"><strong>GitHub</strong></a>
             <ul class="downloads">
-              <li><a href="https://tinnvec.github.io/stonebot" class="button">stonebot</a></li>
-              <li><a href="https://tinnvec.github.io/tinntime" class="button">tinntime</a></li>
+                <li><a href="/" class="button">Home</a></li>
+                {% for page in site.pages %}
+                    {% if page.url and page.title %}
+                        <li><a href="{{ page.url }}" class="button">{{ page.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
             </ul>
         </div>
         <!-- end banner -->
@@ -57,17 +60,17 @@
         </div>
         <!--[if !IE]><script>fixScale(document);</script><![endif]-->
         {% if site.google_analytics %}
-        <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost +
-                "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-        </script>
-        <script type="text/javascript">
-            try {
-                var pageTracker = _gat._getTracker("{{ site.google_analytics }}");
-                pageTracker._trackPageview();
-            } catch (err) {}
-        </script>
+            <script type="text/javascript">
+                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost +
+                    "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+                try {
+                    var pageTracker = _gat._getTracker("{{ site.google_analytics }}");
+                    pageTracker._trackPageview();
+                } catch (err) {}
+            </script>
         {% endif %}
     </body>
 
