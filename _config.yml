@@ -21,4 +21,5 @@ google_analytics: UA-47261670-1
 # Excerpt Separator
 # excerpt_separator: <!-- more -->
 gems:
+    - jekyll-sitemap
     - jekyll-seo-tag
