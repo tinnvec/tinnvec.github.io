@@ -2,6 +2,12 @@
 ---
 @import '{{ site.theme }}';
 
+#banner {
+    #logo {
+        background: url('../images/tinnvec-logo.png');
+    }
+}
+
 nav {
     max-height: 60vh;
     overflow-y: auto;
