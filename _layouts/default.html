@@ -39,11 +39,7 @@
         <div id="banner">
             <ul class="downloads">
                 <li><a href="/" class="button">Home</a></li>
-                {% for page in site.pages %}
-                    {% if page.url and page.title %}
-                        <li><a href="{{ page.url }}" class="button">{{ page.title }}</a></li>
-                    {% endif %}
-                {% endfor %}
+                <li><a href="/blog" class="button">Blog</a></li>
             </ul>
         </div>
         <!-- end banner -->
