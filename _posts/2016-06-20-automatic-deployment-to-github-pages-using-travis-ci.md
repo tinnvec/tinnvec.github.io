@@ -3,11 +3,7 @@ layout: post
 title: Automatic deployment to Github Pages using Travis CI
 date: 2016-06-20 14:30:00 -0500
 categories:
-    - programming
-    - deployment
-tags:
-    - github pages
-    - travis ci
+    - Coding
 ---
 Working with [decal](https://github.com/tinnvec/decal), I have the need to host a very simple HTML5/JavaScript site.
 This can be very easily done with Github Pages, but I can't be bothered to update the `gh-pages` branch manually every
