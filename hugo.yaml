@@ -1,8 +1,8 @@
-baseURL: https://tinnvec.com/
+baseURL: https://tinnvec.github.io/
 languageCode: en-us
 title: tinnvec
 paginate: 5
-theme: ['PaperMod']
+theme: PaperMod
 
 # menus:
 #   main:
