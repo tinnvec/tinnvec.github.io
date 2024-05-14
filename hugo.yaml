@@ -2,7 +2,7 @@ baseURL: https://tinnvec.com/
 languageCode: en-us
 title: tinnvec
 paginate: 5
-theme: PaperMod
+theme: ['PaperMod']
 
 # menus:
 #   main:
