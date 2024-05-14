@@ -1,0 +1,58 @@
+baseURL: https://tinnvec.com/
+languageCode: en-us
+title: tinnvec
+paginate: 5
+theme: PaperMod
+
+# menus:
+#   main:
+#     - name: posts
+#       url: posts
+#       weight: 10
+#     - name: about
+#       url: about
+#       weight: 20
+
+params:
+  # env: production
+  author: tinnvec
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  # assets:
+  #   favicon: "<link / abs url>"
+  #   favicon16x16: "<link / abs url>"
+  #   favicon32x32: "<link / abs url>"
+  #   apple_touch_icon: "<link / abs url>"
+  #   safari_pinned_tab: "<link / abs url>"
+
+  # label:
+  #   text:
+  #   icon:
+  #   iconHeight:
+
+  profileMode:
+    enabled: true
+    # title: tinnvec
+    # subtitle: tango india november november victor edward charlie
+    # imageUrl: "<img location>"
+    # imageWidth: 120
+    # imageHeight: 120
+    # imageTitle: my image
+    # buttons:
+    #   - name: Posts
+    #     url: posts
+    #   - name: Tags
+    #     url: tags
+
+  socialIcons:
+    - name: github
+      url: https://github.com/tinnvec
+    - name: discord
+      url: https://discordapp.com/users/144461503725174784
+    - name: twitch
+      url: https://twitch.tv/tinnvec
+    - name: youtube
+      url: https://www.youtube.com/tinnvec
+    - name: email
+      url: mailto:tinnvec@gmail.com
