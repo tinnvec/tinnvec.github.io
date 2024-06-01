@@ -9,12 +9,9 @@ theme: PaperMod
 #     - name: posts
 #       url: posts
 #       weight: 10
-#     - name: about
-#       url: about
-#       weight: 20
 
 params:
-  # env: production
+  env: production
   author: tinnvec
   defaultTheme: auto
   disableThemeToggle: false
@@ -26,33 +23,22 @@ params:
   #   apple_touch_icon: "<link / abs url>"
   #   safari_pinned_tab: "<link / abs url>"
 
-  # label:
-  #   text:
-  #   icon:
-  #   iconHeight:
-
   profileMode:
     enabled: true
-    # title: tinnvec
-    # subtitle: tango india november november victor edward charlie
+    # title: title
+    # subtitle: subtitle
     # imageUrl: "<img location>"
     # imageWidth: 120
     # imageHeight: 120
     # imageTitle: my image
     # buttons:
-    #   - name: Posts
-    #     url: posts
     #   - name: Tags
     #     url: tags
 
   socialIcons:
     - name: github
       url: https://github.com/tinnvec
+    - name: email
+      url: mailto:tinnvec+ghpage@gmail.com
     - name: discord
       url: https://discordapp.com/users/144461503725174784
-    - name: twitch
-      url: https://twitch.tv/tinnvec
-    - name: youtube
-      url: https://www.youtube.com/tinnvec
-    - name: email
-      url: mailto:tinnvec@gmail.com
